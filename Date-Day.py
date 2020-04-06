@@ -1,5 +1,6 @@
 
 # Date to Day
+
 date=int(input("Enter the date : "))
 month=int(input("Enter the month : "))
 year=int(input("Enter the year : "))
