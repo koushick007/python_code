@@ -1,3 +1,4 @@
+# Customized Password Generator
 import random
 maid_id = input("Enter the mail id - ")
 upper = int(input("Enter number of uppercase you want : "))
