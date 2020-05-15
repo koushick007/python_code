@@ -1,0 +1,22 @@
+#Check which domains/subdomains is active from list of domains/subdomains
+import os
+import time
+ip_file = input("Enter the ip file source : ")
+with open(ip_file) as file:
+    dump = file.read()
+    dump1 = dump.splitlines()
+    for ip in dump1:
+        os.system('cls')
+        print('pinging now:', ip)
+        response = os.system('ping -n 2 {}'.format(ip))
+
+        if response == 0:
+            pingstatus = " Active"
+        else:
+            pingstatus = " Down"
+        print(ip + ' is' + pingstatus)
+        f = open("myfile.txt", "a")
+        f.write(ip + ' is' + pingstatus + os.linesep)
+        f.close()
+        time.sleep(5)
+
